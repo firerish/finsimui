@@ -18,8 +18,9 @@ export default function index(props) {
     ]}
     cta={{ text: "Sign Up", url: "/signup" }}
     activeTab={activeTab}
-  />{" "}
+  />
   <main className="p-8 bg-gray-100">
+    <InputSectionOne />
     {activeTab === "Parameters" && <InputSectionOne />}
     {activeTab === "Events" && <InputSectionThree />}
   </main>

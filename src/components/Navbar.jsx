@@ -4,16 +4,15 @@ import Tab from "@/components/Tab";
 import Button from "@/components/Button";
 
 export default function Navbar(props) {
-    const [selectedTab, setSelectedTab] = React.useState("Home");
-const [activeTab, setActiveTab] = React.useState("Home");
+    const [activeTab, setActiveTab] = React.useState("Home");
     return (<><header className="bg-gradient-to-b from-zinc-900 to-zinc-950 p-3 flex justify-between items-center gap-3 font-light">
   <div className="text-slate-100 text-xl">{props.logo}</div>
   <div className="flex justify-center gap-6 z-50">
     {props.links.map((link) => (
       <Tab
         label={link.text}
-        active={link.text === selectedTab}
-        onClick={() => setSelectedTab(link.text)}
+        active={link.text === activeTab}
+        onClick={() => setActiveTab(link.text)}
       >
         {link.text}
       </Tab>
@@ -24,6 +23,5 @@ const [activeTab, setActiveTab] = React.useState("Home");
       {props.cta.text}
     </Button>
   )}
-</header>
-</>);
+</header></>);
 } 
