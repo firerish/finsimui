@@ -2,7 +2,7 @@
 
   import React from "react";
 
-import LifeEvent from "@/components/LifeEvent";
+import Event from "@/components/Event";
 
 export default function Events(props) {
     
