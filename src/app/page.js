@@ -1,11 +1,14 @@
-import React from "react";
+"use client";
+
+  import React from "react";
 
 import Navbar from "@/components/Navbar";
-import InputSectionOne from "@/components/InputSectionOne";
+import Home from "@/components/Home";
+import Parameters from "@/components/Parameters";
 import InputSectionThree from "@/components/InputSectionThree";
 
 export default function index(props) {
-    const [activeTab, setActiveTab] = React.useState('Home');
+    const [activeTab, setActiveTab] = React.useState("Parameters");
     return (<><>
   <Navbar
     logo="Financial Simulator"
@@ -18,11 +21,12 @@ export default function index(props) {
     ]}
     cta={{ text: "Sign Up", url: "/signup" }}
     activeTab={activeTab}
+    setActiveTab={setActiveTab}
   />
   <main className="p-8 bg-gray-100">
-    <InputSectionOne />
-    {activeTab === "Parameters" && <InputSectionOne />}
-    {activeTab === "Events" && <InputSectionThree />}
+    {activeTab == "Home" && <Home />}
+    {activeTab == "Parameters" && <Parameters />}
+    {activeTab == "Events" && <InputSectionThree />}
   </main>
 </>
 </>);
