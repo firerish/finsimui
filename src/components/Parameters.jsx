@@ -9,19 +9,10 @@ import Economy from "@/components/Economy";
 
 export default function Parameters(props) {
     
-    return (<>  <div className="flex flex-row">
-    <div>
-      <StartPosition />
-    </div>
-    <div>
-      <Targets />
-    </div>
-    <div>
-      <Allocations />
-    </div>
-    <div>
-      <Economy />
-    </div>
-  </div>
-</>);
+    return (<><div className="flex flex-row">
+  <StartPosition />
+  <Targets />
+  <Allocations />
+  <Economy />
+</div></>);
 } 

@@ -5,7 +5,6 @@
 import SelectInput from "@/components/SelectInput";
 import StringInput from "@/components/StringInput";
 import NumberInput from "@/components/NumberInput";
-import Button from "@/components/Button";
 
 export default function LifeEvent(props) {
     const [eventDetails, setEventDetails] = React.useState({});
@@ -28,7 +27,6 @@ const [errorMessage, setErrorMessage] = React.useState("");
     <NumberInput label="Start year" />
     <NumberInput label="End year" />
   </div>
-  <Button>Save Event</Button>
 </div>
 </>);
 } 
